@@ -5,12 +5,64 @@
         <script src="loqur/three.js"></script>
         <script src="pc.js"></script>
         <style>
-        
+            .controlBox{
+                width : 100px;
+                height : 128px;
+                background-color : black;
+            }
+            
+            .moveControls{
+                position : fixed;
+                top : 0px;
+                left : 0px;
+            }
+            
+            .lookControls{
+                position : fixed;
+                top : 128px;
+                left : 0px;
+            }
+            
+            button{
+                color : rgb(241,196,15);
+                background-color : rgb(31, 45, 58);
+                border : 1px solid rgb(241,196,15);
+                width : 100%;
+                height : 30px;
+                margin-top : 2px;
+                font-family : monospace;
+            }
+            
+            #cameraSelector{
+                position : fixed;
+                width : 100px;
+                right : 0px;
+                color : rgb(241,196,15);
+                background-color : rgb(31, 45, 58);
+                border : 1px solid rgb(241,196,15);
+                padding : 2px;
+                
+            }
+            
         </style>
     </head>
     <body>
-        <div id="controls">
-            
+        <div class="lookControls controlBox">
+            <button>look left</button>
+            <button>look right</button>
+            <button>look up</button>
+            <button>look down</button>
         </div>
+        <div class="moveControls controlBox">
+            <button>move left</button>
+            <button>move right</button>
+            <button>move up</button>
+            <button>move down</button>
+        </div>
+        
+        <select id="cameraSelector">
+          <option value="volvo">keyboard</option>
+          <option value="saab">vr</option>
+        </select>
     </body>
 </html>
