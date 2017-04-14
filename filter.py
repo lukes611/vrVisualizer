@@ -71,7 +71,7 @@ def readStats(fileName):
 
 fn = 'multi_selection.csv'
 mn, mx = readStats(fn)
-vo = Volout(mn, mx, 256)
+vo = Volout(mn, mx, 128)
 file = open(fn, 'r')
 for line in file:
     if line[0] != '#':

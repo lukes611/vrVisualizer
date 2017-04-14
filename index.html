@@ -2,12 +2,14 @@
 <html>
     <head>
         <script src="loqur/jq.js"></script>
+        <script src="loqur/LLA.js"></script>
         <script src="loqur/three.js"></script>
+        <script src="pointCloud128.js"></script>
         <script src="pc.js"></script>
         <style>
             .controlBox{
                 width : 100px;
-                height : 128px;
+                height : auto;
                 background-color : black;
             }
             
@@ -19,7 +21,7 @@
             
             .lookControls{
                 position : fixed;
-                top : 128px;
+                top : 192px;
                 left : 0px;
             }
             
@@ -56,6 +58,8 @@
         <div class="moveControls controlBox">
             <button>move left</button>
             <button>move right</button>
+            <button>move fwd</button>
+            <button>move bwd</button>
             <button>move up</button>
             <button>move down</button>
         </div>
