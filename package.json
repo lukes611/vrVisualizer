@@ -1,0 +1,27 @@
+{
+  "name": "vivis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukes611/vrVisualizer.git"
+  },
+  "keywords": [
+    "vr",
+    "vis"
+  ],
+  "author": "luke lincoln",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukes611/vrVisualizer/issues"
+  },
+  "homepage": "https://github.com/lukes611/vrVisualizer#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}

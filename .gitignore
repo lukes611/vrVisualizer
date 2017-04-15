@@ -4,3 +4,4 @@ imgs/
 *.dxf
 *.txt
 *.csv
+node_modules

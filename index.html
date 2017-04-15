@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="loqur/jq.js"></script>
         <script src="loqur/LLA.js"></script>
+        <script src="loqur/LCamera.js"></script>
+        <script src="loqur/LVR.js"></script>
         <script src="loqur/three.js"></script>
-        <script src="pointCloud128.js"></script>
+        <script src="pointCloud256.js"></script>
         <script src="pc.js"></script>
         <style>
             .controlBox{
@@ -49,24 +52,24 @@
         </style>
     </head>
     <body>
-        <div class="lookControls controlBox">
-            <button>look left</button>
-            <button>look right</button>
-            <button>look up</button>
-            <button>look down</button>
+        <div id="lkControls" class="lookControls controlBox">
+            <button onclick="cam.lookLeft(20)">look left</button>
+            <button onclick="cam.lookRight(20)">look right</button>
+            <button onclick="cam.lookUp(10)">look up</button>
+            <button onclick="cam.lookDown(20)">look down</button>
         </div>
-        <div class="moveControls controlBox">
-            <button>move left</button>
-            <button>move right</button>
-            <button>move fwd</button>
-            <button>move bwd</button>
-            <button>move up</button>
-            <button>move down</button>
+        <div  class="moveControls controlBox">
+            <button onclick="cam.goLeft(10)">move left</button>
+            <button onclick="cam.goRight(10)">move right</button>
+            <button onclick="cam.goForward(10)">move fwd</button>
+            <button onclick="cam.goBackward(10)">move bwd</button>
+            <button onclick="cam.goUp(-10)">move up</button>
+            <button onclick="cam.goDown(-10)">move down</button>
         </div>
         
-        <select id="cameraSelector">
-          <option value="volvo">keyboard</option>
-          <option value="saab">vr</option>
+        <select id="cameraSelector" onchange="changeCamera(this.value)">
+          <option value="kb">keyboard</option>
+          <option value="vr">vr</option>
         </select>
     </body>
 </html>
